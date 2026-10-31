@@ -3,6 +3,6 @@
 Página simples de apresentação de oito participantes, com visual inspirado em Round 6.
 
 Abra `index.html` no navegador. A grade tem quatro colunas e duas linhas no desktop e se adapta a telas menores.
-Clique em uma foto (ou use Tab e Enter/Espaço) para deixá-la em tons de cinza; selecione novamente para restaurar as cores. É possível selecionar vários participantes.
+Clique em uma foto para eliminar o participante e deixá-la em tons de cinza; clique novamente para restaurá-lo. É possível eliminar vários participantes.
 
-Para personalizar os usuários, altere os nomes, números, textos acessíveis e URLs das fotos em `index.html`. As fotos de exemplo são carregadas do Unsplash e precisam de conexão com a internet. A seleção dura enquanto a página estiver aberta e é reiniciada ao recarregar.
+As fotos dos participantes são carregadas dos arquivos deste repositório. Para personalizar, altere os nomes, números, textos acessíveis e URLs das fotos em `index.html`. Também é possível trocar uma foto temporariamente pelo botão em cada cartão; a alteração dura enquanto a página estiver aberta.
