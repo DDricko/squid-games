@@ -3,12 +3,17 @@ const selectionCount = document.querySelector("#selection-count");
 
 participants.forEach((participant) => {
   participant.addEventListener("click", () => {
-    const selected = participant.getAttribute("aria-pressed") !== "true";
-    participant.setAttribute("aria-pressed", String(selected));
-    participant.querySelector(".state").textContent = selected ? "Selecionado" : "Em jogo";
+    const eliminated = participant.getAttribute("aria-pressed") !== "true";
+    participant.setAttribute("aria-pressed", String(eliminated));
+    participant.querySelector(".state").textContent = eliminated ? "Eliminado" : "Em jogo";
+
+    const name = participant.querySelector(".name").textContent;
+    const number = participant.querySelector(".number").textContent;
+    participant.setAttribute("aria-label", `${eliminated ? "Restaurar" : "Eliminar"} ${name}, participante ${number}`);
 
     const count = document.querySelectorAll('.participant[aria-pressed="true"]').length;
-    selectionCount.textContent = `${count} de ${participants.length} participantes selecionados`;
+    const label = count === 1 ? "participante eliminado" : "participantes eliminados";
+    selectionCount.textContent = `${count} de ${participants.length} ${label}`;
   });
 });
 
