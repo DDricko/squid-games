@@ -1,0 +1,168 @@
+:root {
+  color-scheme: dark;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #091513;
+  color: #f3f6f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at top, #173f35, transparent 65%);
+}
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 36px 24px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.symbols {
+  color: #f44786;
+  font-size: 42px;
+  letter-spacing: 12px;
+}
+
+.eyebrow {
+  color: #8dd8bc;
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 12px 0;
+  font-size: clamp(24px, 5vw, 48px);
+  letter-spacing: 3px;
+}
+
+h1 span {
+  color: #f44786;
+}
+
+.instructions {
+  color: #c2d1ca;
+  line-height: 1.6;
+}
+
+.selection-count {
+  color: #8dd8bc;
+  font-size: 14px;
+}
+
+.participants {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.participant {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  border: 2px solid #368469;
+  border-radius: 8px;
+  background: #173f35;
+  color: #fff;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+}
+
+.participant img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 6;
+  object-fit: cover;
+  transition: filter 180ms ease;
+}
+
+.participant:hover {
+  border-color: #8dd8bc;
+}
+
+.participant:focus-visible {
+  outline: 3px solid #f44786;
+  outline-offset: 4px;
+}
+
+.participant[aria-pressed="true"] {
+  border-color: #f44786;
+}
+
+.participant[aria-pressed="true"] img {
+  filter: grayscale(100%);
+}
+
+.number {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background: #0b4939;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.participant-info {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 32px 16px 16px;
+  background: linear-gradient(transparent, #000);
+}
+
+.name {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.state {
+  display: block;
+  margin-top: 5px;
+  color: #8dd8bc;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.participant[aria-pressed="true"] .state {
+  color: #ff9fc1;
+}
+
+footer {
+  margin-top: 28px;
+  color: #c2d1ca;
+  text-align: center;
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .participants {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .participants {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .participant img {
+    transition: none;
+  }
+}
