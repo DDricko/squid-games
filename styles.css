@@ -136,6 +136,33 @@ h1 span {
   color: #ff9fc1;
 }
 
+.game-rules {
+  margin-top: 40px;
+  padding: 24px;
+  border: 1px solid #368469;
+  border-radius: 8px;
+  background: #0b211c;
+}
+
+.game-rules h2 {
+  margin: 0 0 16px;
+  color: #8dd8bc;
+  font-size: 22px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.game-rules ul {
+  margin: 0;
+  padding-left: 22px;
+  color: #c2d1ca;
+  line-height: 1.7;
+}
+
+.game-rules li + li {
+  margin-top: 8px;
+}
+
 footer {
   margin-top: 28px;
   color: #c2d1ca;
